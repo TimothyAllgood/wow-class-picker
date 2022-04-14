@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #101010;
+  background-image: url('../assets/bg.jpg');
+  background-size: cover;
+  color: white;
+  line-height: 1.6;
+  font-family: 'Skranji', cursive;
+}
+h1 {
+  margin: 10px;
+}
+
+.container {
+  display: flex;
+}
+
+#inner-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@property --color-1 {
+  syntax: '<color>';
+  initial-value: #101010;
+  inherits: false;
+}
+
+@property --color-2 {
+  syntax: '<color>';
+  initial-value: #101010;
+  inherits: false;
+}
+
+#inner-container select {
+  background: linear-gradient(var(--color-1), var(--color-2));
+  color: #ffc000;
+  border-top: 4px ridge #ffb000;
+  border-left: 4px groove #ffb000;
+  border-right: 4px ridge #ffb000;
+  border-bottom: 4px groove #ffb000;
+  box-shadow: inset 0px 0px 5px 3px rgba(1, 1, 1, 0.3);
+  font-size: 1.5rem;
+  font-family: 'Skranji', cursive;
+  outline: none;
+  transition: --color-1 0.5s, --color-2 0.5s;
+}
+
+#inner-container select:hover {
+  cursor: pointer;
+  --color-1: #252525;
+}
+
+#inner-container option {
+  background: #8b0000;
+}
+
+#inner-container .alliance-select option {
+  background: #004a93;
+}
+
+#inner-container select,
+#inner-container button {
+  margin: 10px 0;
+  padding: 15px 10px;
+  width: 200px;
+  border-radius: 8px;
+}
+
+#char-info p {
+  text-align: center;
+  margin: 10px;
+  font-size: 1.5rem;
+}
+
+#random-btn {
+  position: relative;
+  margin: 10px auto;
+  width: 200px;
+  letter-spacing: 2px;
+  border-radius: 8px;
+  font-family: 'Skranji', cursive;
+  color: #ffc000;
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-shadow: 0 1px 3px #000;
+  text-align: center;
+  padding: 10px 0;
+  background: radial-gradient(circle, var(--color-1), var(--color-2));
+  border-top: 4px ridge #ffb000;
+  border-left: 4px groove #ffb000;
+  border-right: 4px ridge #ffb000;
+  border-bottom: 4px groove #ffb000;
+  box-shadow: inset 0px 0px 5px 3px rgba(1, 1, 1, 0.3);
+  transition: --color-1 0.5s, --btn2 0.5s;
+}
+
+#random-btn:hover {
+  --color-1: #252525;
+  cursor: pointer;
+}
+
+.alliance-select select,
+.alliance-select #random-btn {
+  --color-1: #004a93;
+  --color-2: #005cb8;
+}
+
+.alliance-select select:hover,
+.alliance-select #random-btn:hover {
+  --color-1: #005cb8 !important;
+  --color-2: #004a93 !important;
+}
+
+.horde-select select,
+.horde-select #random-btn {
+  --color-1: #8c1616;
+  --color-2: #a71a1a;
+}
+
+.horde-select select:hover,
+.horde-select #random-btn:hover {
+  --color-1: #a71a1a !important;
+  --color-2: #8c1616 !important;
+}

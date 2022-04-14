@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/colors.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script defer src="./js/main.js"></script>
+    <title>Wow Class Generator</title>
+  </head>
+  <body>
+    <main class="container">
+      <section id="inner-container">
+        <h1>World Of Warcraft Class Picker</h1>
+        <select name="faction" id="faction-select" onchange="getFaction(this)">
+          <option value="Random">Random</option>
+          <option value="Alliance">Alliance</option>
+          <option value="Horde">Horde</option>
+        </select>
+        <button id="random-btn">Get Random</button>
+        <div id="char-info">
+          <p id="faction">&nbsp;</p>
+          <p id="race">&nbsp;</p>
+          <p id="class">&nbsp;</p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
