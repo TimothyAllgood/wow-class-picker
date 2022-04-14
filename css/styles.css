@@ -61,11 +61,15 @@ h1 {
 }
 
 #inner-container option {
-  background: #8b0000;
+  background: #101010;
 }
 
-#inner-container .alliance-select option {
-  background: #004a93;
+#inner-container.alliance-select option {
+  background: #004a93 !important;
+}
+
+#inner-container.horde-select option {
+  background: #8c1616 !important;
 }
 
 #inner-container select,
